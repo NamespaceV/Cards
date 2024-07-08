@@ -8,7 +8,7 @@ static func create (action_name_: String) -> Action:
 	result.action_name = action_name_
 	return result
 
-func is_available( current_state : GameState ) -> bool:
+func is_available( _current_state : GameState ) -> bool:
 	return true
 
 func _to_string() -> String:
