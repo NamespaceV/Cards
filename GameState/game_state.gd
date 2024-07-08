@@ -1,4 +1,4 @@
-class_name MainState
+class_name GameState
 extends Node
 
 @onready var buttons : Array[Button]= [
@@ -11,22 +11,14 @@ extends Node
 
 @onready var description : TextEdit = $Description
 
-var current_scene : GameplayScene = GameplayScene.new()
+var current_scene : Encounter = Encounter.create_warehouse()
+
 var hand : Array[Card] = [
 	Card.new(5, Card.SUIT_CLUBS),
 	Card.new(5, Card.SUIT_HEARTS),
 	Card.new(10, Card.SUIT_CLUBS),
 	Card.new(Card.VALUE_ACE, Card.SUIT_CLUBS),
 ]
-
-func card_clicked(i : int):
-	print("clicked %s - %s" % [ i, hand[i] ])
-
-func has_suit(suit_needed : String) -> bool:
-	for card in hand:
-		if card.suite == suit_needed:
-			return true
-	return false
 
 func _ready():
 	for i in buttons.size():
@@ -39,3 +31,12 @@ func _ready():
 		buttons[i].text = str(hand[i]) + "\n" + str(action)
 		buttons[i].disabled = false
 	description.text = current_scene.render_for_state(self)
+
+func card_clicked(i : int):
+	print("clicked %s - %s" % [ i, hand[i] ])
+
+func has_suit(suit_needed : String) -> bool:
+	for card in hand:
+		if card.suite == suit_needed:
+			return true
+	return false
