@@ -2,7 +2,7 @@
 
 developed for Krong Godota on Polygon
 
-Game is base on an RPG system where players have a set of poke cards in hand
+Game is base on an RPG system where players have a set of poke cards in hand designed by Mlody
 
 Each suit represents a different aspect that defines the type of action e.g 
 
