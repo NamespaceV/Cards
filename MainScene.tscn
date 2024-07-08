@@ -1,0 +1,48 @@
+[gd_scene load_steps=2 format=3 uid="uid://ut2i4ms0ylss"]
+
+[ext_resource type="Script" path="res://MainState.gd" id="1_yw5fh"]
+
+[node name="MainScene" type="Node2D"]
+script = ExtResource("1_yw5fh")
+
+[node name="Description" type="TextEdit" parent="."]
+offset_right = 1152.0
+offset_bottom = 323.0
+text = "asdasdasd"
+editable = false
+
+[node name="ActionButtons" type="HBoxContainer" parent="."]
+offset_left = -2.0
+offset_top = 344.0
+offset_right = 1150.0
+offset_bottom = 465.0
+
+[node name="Button" type="Button" parent="ActionButtons"]
+custom_minimum_size = Vector2(200, 0)
+layout_mode = 2
+text = "
+Card 1"
+
+[node name="Button2" type="Button" parent="ActionButtons"]
+custom_minimum_size = Vector2(200, 0)
+layout_mode = 2
+text = "
+Card 1"
+
+[node name="Button3" type="Button" parent="ActionButtons"]
+custom_minimum_size = Vector2(200, 0)
+layout_mode = 2
+text = "
+Card 1"
+
+[node name="Button4" type="Button" parent="ActionButtons"]
+custom_minimum_size = Vector2(200, 0)
+layout_mode = 2
+text = "
+Card 1"
+
+[node name="Button5" type="Button" parent="ActionButtons"]
+custom_minimum_size = Vector2(200, 0)
+layout_mode = 2
+text = "
+Card 1"
